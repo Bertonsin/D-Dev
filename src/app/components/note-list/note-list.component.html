@@ -1,0 +1,28 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="container">
+  @for(item of noteList; track item.title) {
+  <div class="terminal-card">
+    <div class="terminal-card-top">
+      <div class="terminal-card-top-tab">
+        <span>./{{ item.tag }}/{{item.title}}</span>
+        <mat-icon class="terminal-card-top-tab-close-button" aria-hidden="false" fontIcon="close" />
+      </div>
+      <div class="content-container">
+        <span class="arrow">></span>
+        <span class="title">{{ item.title }}</span>
+        <span class="pre-content">git:(<span class="pre-content-inner-info">{{item.tag}}</span>)
+          <span class="content">
+            {{item.description}}
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="terminal-controls">
+      <mat-icon aria-hidden="false" fontIcon="remove" />
+      <mat-icon aria-hidden="false" fontIcon="check_box_outline_blank" />
+      <mat-icon aria-hidden="false" fontIcon="close" />
+    </div>
+  </div>
+  }
+</div>
