@@ -1,0 +1,18 @@
+<form class="container" action="" [formGroup]="noteForm" (submit)="submit()">
+  <div class="input-container">
+    <label for="tag">Tag</label>
+    <input id="tag" type="text" formControlName="tag">
+  </div>
+
+  <div class="input-container">
+    <label for="title">Title</label>
+    <input id="title" type="text" formControlName="title">
+  </div>
+
+  <div class="input-container">
+    <label for="description">Description</label>
+    <input id="description" type="text" formControlName="description">
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
